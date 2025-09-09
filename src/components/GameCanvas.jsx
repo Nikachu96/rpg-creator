@@ -20,7 +20,7 @@ function GameCanvas({ worldData }) {
   return (
     <div
       ref={gameRef}
-      className="w-full h-[500px] border-2 border-gray-400 mt-4"
+      className="w-[800px] h-[250px] border-2 border-gray-400 mt-4"
     >
       {/* Phaser canvas will be injected here */}
     </div>

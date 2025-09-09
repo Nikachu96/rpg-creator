@@ -3,10 +3,20 @@ import Phaser from "phaser";
 // This function returns a Phaser config object
 export function createGameConfig(container, worldData) {
   return {
-    type: Phaser.AUTO,
-    parent: container, // div ref from GameCanvas
-    width: 800,
-    height: 500,
+   type: Phaser.AUTO,
+  parent: container, // if you're using a string id, or keep your ref
+  physics: {
+    default: "arcade",
+    arcade: {
+      gravity: { y: 0 },
+    },
+  },
+  scale: {
+    mode: Phaser.Scale.RESIZE,       // makes it fill parent size
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+    width: window.innerWidth,
+    height: window.innerHeight,
+  },
     physics: {
       default: "arcade",
       arcade: {
